@@ -1,0 +1,45 @@
+<!-- Home Page - Submit Form and Archive Lists -->
+<div class="main-logo">
+  <a href="/">
+    <h1>Archive&</h1>
+    <h1>Download</h1>
+  </a>
+</div>
+
+<div class="main-wrapper-input">
+  <form action="/submit/" method="get">
+    <div class="input-group">
+      <textarea name="website" class="input-url" placeholder="url to save and make avaliable to download as a torrent" autofocus></textarea>
+    </div>
+    <div class="input-group">
+      <input type="submit">
+    </div>
+  </form>
+</div>
+
+<div class="main-wrapper-list">
+  <% if(popular_archives != null){ %>
+  <div class="main-wrapper-list-inner">
+    <h2>Most Popular Archives</h2>
+    <ul>
+      <% _.each(popular_archives, function (archive) { if(archive != null){ %>
+        <li><a href="/view/<%= archive.id %>"><%= archive.website_url.substring(0, 100) %><% if(archive.website_url.length > 100) { %>...<% } %></a></li>
+      <% }}) %>
+    </ul>
+  </div>
+  <% } %>
+  <% if(recent_archives.length > 0){ %>
+  <div class="main-wrapper-list-inner">
+    <h2>Most Recent Archives</h2>
+    <ul>
+      <%  _.each(recent_archives, function (archive) { if(archive != null) { %>
+        <li><a href="/view/<%= archive.id %>"><%= archive.website_url.substring(0, 100) %><% if(archive.website_url.length > 100) { %>...<% } %></a></li>
+      <% }}) %>
+    </ul>
+  </div>
+  <% } %>
+</div>
+
+<div class="main-version">
+  <h3>Software Version <%= version %></h3>
+</div>

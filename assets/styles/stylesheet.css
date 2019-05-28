@@ -1,0 +1,54 @@
+body {
+    font-family: "Droid Serif";
+    font-size: 1.8rem;
+}
+.main-wrapper {
+    padding: 2.15em 0 0 4em;
+}
+.main-logo > a > h1{
+    font-size: 3.5rem;
+    line-height: .7em;
+    font-weight: bold;
+}
+h2 {
+    font-weight: bold;
+}
+.input-url{
+    text-decoration: underline;
+    width: 80%;
+    resize: none;
+    height: 2.5em;
+    outline: none;
+    border: none;
+    margin-top: 1rem;
+}
+
+.main-wrapper-list-inner{
+    padding-top: 1em;
+}
+.main-wrapper-text{
+    padding-top: 1em;
+    width: 80%;
+}
+
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px){
+    body{
+        font-size: 1.2rem;
+    }
+    .main-logo > a > h1{
+        font-size: 2.5rem;
+        line-height: .6em;
+        font-weight: bold;
+    }
+    .main-wrapper {
+        padding: 1.15em 0 0 2em;
+    }
+    .input-url{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .main-wrapper-text{
+        width: 100%;
+    }
+}
